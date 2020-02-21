@@ -1,0 +1,16 @@
+Date: 2019-06-16
+Title: Emacs Japanese Font Config
+
+I'm currently trying out using emacs as my main editor. I especially like that I can open up the eww web browser in a window, and research things on the web without leaving emacs. It is a big problem when I am coding, switch over to my browser to research a problem I have, and 30 minutes later find myself on Wikipedia reading about some random nematode found in Atlantic fish. eww is surprisingly functional for a text based web browser, but it is ugly and clunky enough to keep me focused on my work.
+
+I discovered that Japanese text renders horribly in emacs/eww. This is on Fedora Linux. When I opened a Japanese site in eww, it was a terrible mix of serif and sans-serif fonts, some of which were anti-aliased and some that were not.
+
+I struggled to find a simple solution to this when searching on the English language web. However, I immediately found a great solution on the Japanese web, on [this blog post](http://asukiaaa.blogspot.com/2017/11/ubuntuemacs.html).
+
+All I needed was this one-liner in my emacs config:
+```
+(set-fontset-font t 'japanese-jisx0208 "Noto Sans CJK JP")
+```
+  
+<br>
+Set the font name as desired. The addition of this line to my emacs config seems to be working great for my needs. I now have consistent font display on Japanese sites in eww. 

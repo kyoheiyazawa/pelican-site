@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block title %}{{ article.title }}{% endblock %}
+
+{% block content %}
+<p><a href="/">&lt;&lt; Back</a></p>
+<h1>{{ article.title }}</h1>
+<p class="article-date">{{ article.locale_date }}</p>
+<div id="article-contents-container">
+{{ article.content }}
+</div>
+{% endblock %}

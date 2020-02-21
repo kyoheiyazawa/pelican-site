@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="{% block html_lang %}{{ DEFAULT_LANG }}{% endblock html_lang %}">
+
+<head>
+    {% block head %}
+    <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/style.css">
+    {% endblock head %}
+</head>
+
+<body>
+    {% block header %}
+    <header>
+        <div id="header-flex-container">
+            {% block headertitle %}<span class="header-title"><a href="{{ SITEURL }}/">Kyohei Yazawa</a></span>{% endblock %}
+            <nav id="header-menu">
+                <ul>
+                    <li><a href="{{ SITEURL }}/about">about</a></li>
+                    <li><a href="https://github.com/kyoheiyazawa/">github</a></li>
+		    <li><a href="https://twitter.com/kyoheiyazawa">twitter</a></li>
+		    <li><a href="{{ SITEURL }}/feeds/all.atom.xml">rss</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </header>
+    {% endblock header %}
+
+    <div id="content-container">
+    {% block content %}
+    {% endblock %}
+    </div>
+</body>
+</html>
